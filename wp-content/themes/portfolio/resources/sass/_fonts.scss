@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Bitter-Regular";
+  src: url("../../public/fonts/Bitter-Regular.ttf") format("truetype") ;
+}
+@font-face {
+  font-family: "Bitter-SemiBold";
+  src: url("../../public/fonts/Bitter-SemiBold.ttf") format("truetype") ;
+}
+
+
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url("../../public/fonts/Raleway-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Raleway-SemiBold";
+  src: url("../../public/fonts/Raleway-SemiBold.ttf") format("truetype");
+}
+.body{
+  font-family: Raleway, serif;
+}

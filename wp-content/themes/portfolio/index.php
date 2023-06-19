@@ -8,7 +8,9 @@
         </section>
         <section class="lastprojects" aria-labelledby="lastprojects__title">
             <h2 class="lastprojects__title" id="lastprojects__title">Mes derniers projets</h2>
-            <a href="<?=get_permalink(get_page_by_path( 'projets' ))?>" class="lastprojects__link">Découvrir mes créations</a>
+            <div class="linkcontainer">
+                <a href="<?=get_permalink(get_page_by_path( 'projets' ))?>" class="lastprojects__link">Découvrir mes créations</a>
+            </div>
             <?php
                 // Faire une requête en DB pour récupérer 4 animaux
                 $projects = new WP_Query([
@@ -42,7 +44,9 @@
         </section>
         <section class="services" aria-labelledby="services__title">
             <h2 class="services__title" id="services__title">Mes services</h2>
-            <p class="services__excerpt">Vous êtes intéressé et souhaitez faire appel à mes service ? N’hésitez pas à me contacter grâce au formulaire disponible via le lien ci-dessous</p>
+            <p class="services__excerpt">Vous êtes intéressé et souhaitez faire appel à mes service ? N’hésitez pas à me contacter
+                <br>
+                grâce au formulaire disponible via le lien ci-dessous</p>
             <a href="<?=get_permalink(get_page_by_path( 'contact' ))?>" class="services__link">Contactez-moi</a>
         </section>
         <section class="main__about" aria-labelledby="main__about-title">

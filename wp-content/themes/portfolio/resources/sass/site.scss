@@ -1,0 +1,102 @@
+@import "reset";
+@import "utils";
+@import "colors";
+@import "fonts";
+@import "header";
+@import "footer";
+
+/*   Section onboarding   */
+
+.onboarding{
+  padding: 18.125em 0 0 10%;
+  background-image: url("../../../../uploads/2023/06/background_portfolio.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 18.125em);
+}
+.onboarding__title, .onboarding__excerpt{
+  font-size: 2.5em;
+  font-family: Bitter-Regular, serif;
+  line-height: 1.5em;
+}
+.onboarding__excerpt-green{
+  color: $green;
+  font-family: Bitter-SemiBold, serif;
+}
+.onboarding__excerpt{
+  margin-bottom: 1.75em;
+}
+.onboarding__link{
+  color: white;
+  text-decoration: none;
+  padding: 0.3125em 0.9375em;
+  background-color: $green;
+  border-radius: 0.625em;
+}
+.onboarding__link:hover, .onboarding__link:focus{
+  color: $green;
+  background-color: white;
+  transition: all 200ms linear;
+}
+
+/*  Section lastproject  */
+
+.lastprojects{
+  padding: 4.6875em 0 4.6875em 10%;
+  background-color: $green;
+}
+.lastprojects__title{
+  display: inline-block;
+  color: white;
+  font-size: 2.5em;
+  font-family: Bitter-SemiBold, serif;
+}
+.lastprojects__link{
+  color: black;
+  text-decoration: none;
+  padding: 0.3125em 0.9375em;
+  background-color: white;
+  border-radius: 0.625em;
+}
+
+/*  Section Services  */
+
+.services{
+  padding: 4.6875em 0;
+  text-align: center;
+}
+.services__title{
+  font-size: 2.5em;
+  font-family: Bitter-SemiBold, serif;
+  margin-bottom: 1.625em;
+}
+.services__excerpt{
+  line-height: 1.875em;
+  margin-bottom: 3.125em;
+}
+.services__link{
+  color: white;
+  text-decoration: none;
+  padding: 0.3125em 0.9375em;
+  background-color: $green;
+  border-radius: 0.625em;
+}
+.services__link:hover, .services__link:focus{
+  color: $green;
+  background-color: white;
+  transition: all 200ms linear;
+}
+
+/*  Section Main About  */
+
+.main__about{
+  padding: 4.6875em 10%;
+  background-image: url("../../../../uploads/2023/06/background_portfolio.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main__about-title{
+  font-size: 2.5em;
+  font-family: Bitter-SemiBold, serif;
+  margin-bottom: 1.25em;
+}

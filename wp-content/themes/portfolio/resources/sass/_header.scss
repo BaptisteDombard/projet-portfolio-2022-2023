@@ -1,0 +1,56 @@
+@import "colors";
+.header{
+  display: block;
+  position: fixed;
+  z-index: 10;
+  min-height: 3.75em;
+  top: 3%;
+  left: 10%;
+  width: 80%;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.25);
+  border-radius: 10px;
+}
+.logo{
+  position: relative;
+  margin-left: 5%;
+}
+.nav__link:first-of-type{
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 27px;
+  height: 40px;
+  opacity: 0;
+  margin-left: 5%;
+}
+.nav__link{
+  font-family: Bitter-Regular, serif;
+  font-size: 1.25em;
+  text-decoration: none;
+  color: black;
+}
+.nav__link:hover, .nav__link:focus{
+  color: $green;
+  transition: all 200ms linear;
+}
+.nav__link:last-of-type{
+  color: white;
+  padding: 0.25em 0.75em;
+  background-color: $green;
+  border-radius: 0.625em;
+  margin-right: 5%;
+}
+.nav__link:last-of-type:hover, .nav__link:last-of-type:focus{
+  color: $green;
+  background-color: white;
+  transition: all 200ms linear;
+}
+.header__nav{
+  min-height: 3.75em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
