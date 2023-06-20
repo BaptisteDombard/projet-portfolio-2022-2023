@@ -20,7 +20,7 @@ function portfolio_register_custom_post_types()
         'public' => true,
         'menu_position' => 20,
         'menu_icon' => 'dashicons-archive',
-        'supports' => ['title','editor','thumbnail'],
+        'supports' => ['title','thumbnail'],
     ]);
 
     register_post_type('message', [
@@ -157,10 +157,10 @@ function portfolio_execute_contact_form ()
             title: fn($data) => $data['firstname'] . ' ' . $data['lastname'] . ' <' . $data['email'] . '>' . ' Sujet : ' . $data['subject'],
             content: fn($data) => $data['message'],
         )
-        ->send(
+        /*->send(
             title: fn($data) => 'Nouveau message de ' . $data['firstname'] . ' ' . $data['latname'],
             content: fn($data) => 'Firstname: ' . $data['firstname'] . PHP_EOL . 'Lastname: ' . $data['lastname'] . PHP_EOL . 'Sujet: ' . $data['subject'] . PHP_EOL . 'Email: ' . $data['email'] . PHP_EOL . 'Message:' . PHP_EOL . $data['message'],
-        )
+        )*/
         ->feedback();
 }
 

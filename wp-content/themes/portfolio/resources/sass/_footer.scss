@@ -1,7 +1,9 @@
+@import "colors";
 .footer{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin:2.5em 10%;
+  padding:2.5em 10%;
+  background-color: $grey;
 }
 
 .footer__number{

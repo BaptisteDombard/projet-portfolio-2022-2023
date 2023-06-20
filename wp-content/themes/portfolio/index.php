@@ -8,7 +8,7 @@
         </section>
         <section class="lastprojects" aria-labelledby="lastprojects__title">
             <h2 class="lastprojects__title" id="lastprojects__title">Mes derniers projets</h2>
-            <div class="linkcontainer">
+            <div class="lastprojects__linkcontainer">
                 <a href="<?=get_permalink(get_page_by_path( 'projets' ))?>" class="lastprojects__link">Découvrir mes créations</a>
             </div>
             <?php
@@ -29,6 +29,7 @@
                             </figure>
                             <div class="project__details">
                                 <h3 class="project__name"><?= get_the_title(); ?></h3>
+                                <p class="project__creation"><?=get_field('starting_year') . '/' . get_field('ending_year')?></p>
                                 <ul class="project__taxonomies">
                                     <?php
                                         $terms =  get_the_terms(get_the_ID(),'types');
@@ -50,9 +51,12 @@
             <a href="<?=get_permalink(get_page_by_path( 'contact' ))?>" class="services__link">Contactez-moi</a>
         </section>
         <section class="main__about" aria-labelledby="main__about-title">
-            <h2 class="main__about-title" id="main__about-title">&Agrave; propos de moi</h2>
-            <p class="main__about-excerpt">Je suis un web déveloper curieux, toujours de bonne humeur et ravi d’écouter vos demandes et suggestions. Alors, n’hésitez pas à faire appel à moi pour toutes vos requêtes en termes de création web.</p>
-            <a href="<?=get_permalink(get_page_by_path( 'a-propos' ))?>" class="main__about-link">En savoir plus sur moi</a>
+            <div class="main__about-texts">
+                <h2 class="main__about-title" id="main__about-title">&Agrave; propos de moi</h2>
+                <p class="main__about-excerpt">Je suis un web déveloper curieux, toujours de bonne humeur et ravi d’écouter vos demandes et suggestions. Alors, n’hésitez pas à faire appel à moi pour toutes vos requêtes en termes de création web.</p>
+                <a href="<?=get_permalink(get_page_by_path( 'a-propos' ))?>" class="main__about-link">En savoir plus sur moi</a>
+            </div>
+            <img src="<?= wp_get_attachment_image_url('87', 'medium') ?>" alt="" class="main__about-img">
         </section>
     </main>
 <?= get_footer()?>

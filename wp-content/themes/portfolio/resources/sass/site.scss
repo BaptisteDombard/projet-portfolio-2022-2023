@@ -4,6 +4,16 @@
 @import "fonts";
 @import "header";
 @import "footer";
+@import "about";
+@import "contact";
+@import "legal";
+@import "projects";
+@import "projectcard";
+@import "singleproject";
+
+body{
+  background-color: white;
+}
 
 /*   Section onboarding   */
 
@@ -42,8 +52,11 @@
 /*  Section lastproject  */
 
 .lastprojects{
-  padding: 4.6875em 0 4.6875em 10%;
+  padding: 4.6875em 10%;
   background-color: $green;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2.5em;
 }
 .lastprojects__title{
   display: inline-block;
@@ -51,12 +64,21 @@
   font-size: 2.5em;
   font-family: Bitter-SemiBold, serif;
 }
+.lastprojects__linkcontainer{
+  justify-self: end;
+  padding-top: 0.3125em;
+}
 .lastprojects__link{
   color: black;
   text-decoration: none;
   padding: 0.3125em 0.9375em;
   background-color: white;
   border-radius: 0.625em;
+}
+.lastprojects__link:hover, .lastprojects__link:focus{
+  background-color: $green;
+  color: white;
+  transition: all 200ms linear;
 }
 
 /*  Section Services  */
@@ -94,9 +116,33 @@
   background-image: url("../../../../uploads/2023/06/background_portfolio.png");
   background-repeat: no-repeat;
   background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .main__about-title{
   font-size: 2.5em;
   font-family: Bitter-SemiBold, serif;
-  margin-bottom: 1.25em;
+  margin-bottom: 1.75em;
+}
+.main__about-img{
+  justify-self: center;
+}
+.main__about-texts{
+  max-width: 80%;
+  line-height: 1.5em;
+}
+.main__about-excerpt{
+  margin-bottom: 4.375em;
+}
+.main__about-link{
+  color: white;
+  text-decoration: none;
+  padding: 0.3125em 0.9375em;
+  background-color: $green;
+  border-radius: 0.625em;
+}
+.main__about-link:hover, .main__about-link:focus{
+  color: $green;
+  background-color: white;
+  transition: all 200ms linear;
 }

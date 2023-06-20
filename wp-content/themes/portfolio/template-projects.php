@@ -20,8 +20,12 @@
                     </figure>
                     <div class="project__details">
                         <h3 class="project__name"><?= get_the_title(); ?></h3>
+                        <p class="project__creation"><?=get_field('starting_year') . '/' . get_field('ending_year')?></p>
                         <ul class="project__taxonomies">
-
+                            <?php
+                            $terms =  get_the_terms(get_the_ID(),'types');
+                            foreach ($terms as $term)?>
+                            <li class="project__taxonomy-item"><?= $term->name ?></li>
                         </ul>
                     </div>
                 </div>

@@ -1,0 +1,13 @@
+.projects{
+  padding: 10.9375em 10% 8em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2.5em;
+}
+.projects__title{
+  font-size: 2.5em;
+  font-family: Bitter-SemiBold, serif;
+  margin-bottom: 1.5em;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+}

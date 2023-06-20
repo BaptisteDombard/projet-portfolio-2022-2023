@@ -1,0 +1,103 @@
+/*  Page Contact  */
+@import "colors";
+.contact__section{
+  padding: 10.9375em 10% 4.6875em;
+  background-color: $green;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 2.5em;
+  grid-column-gap: 12.5em;
+}
+.contact__title{
+  font-size: 2.5em;
+  font-family: Bitter-SemiBold, serif;
+}
+.contact__form-title, .contact__info-title{
+  font-size: 1.5em;
+  font-family: Bitter-SemiBold, serif;
+  margin-bottom: 1.25em;
+}
+.contact__form{
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.field__input{
+  border: none;
+  border-radius: 5px;
+}
+.field__input:not(.field:last-of-type>.field__input){
+  min-height: 2.5em;
+}
+.contact__fields{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.25em;
+  margin-bottom: 1.25em;
+}
+.field{
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3125em;
+}
+.field:nth-child(n+3){
+  grid-column: 1/-1;
+}
+.contact__submit{
+  padding: 0.3125em 0.9375em;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+}
+.contact__submit:hover{
+  cursor: pointer;
+}
+.contact__submit:hover, .contact__submit:focus{
+  background-color: darken(white, 20);
+  transition: all 250ms linear;
+}
+/*  Result Message  */
+.success{
+  color: #00cdcd;
+  font-family: Raleway-SemiBold, serif;
+}
+.success__link{
+  display: inline-block;
+  padding: 0.3125em 0.9375em;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  text-decoration: none;
+  margin-top: 2em;
+}
+.success__link:hover, .success__link:focus{
+  background-color: darken(white, 20);
+  transition: all 250ms linear;
+}
+.error, .field__error{
+  color: red;
+  font-family: Raleway-SemiBold, serif;
+}
+/* section contact info */
+.contact__info{
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.contact__info-phone{
+  display: inline-block;
+}
+.contact__info-mail{
+  text-decoration: none;
+  color: white;
+}
+.contact__info-logo{
+  margin-right: 0.625em;
+}
+.contact__info-item{
+  display: flex;
+  align-items: center;
+}
+.contact__info-item:first-of-type{
+  margin-bottom: 2.5em;
+}

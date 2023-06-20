@@ -1,0 +1,33 @@
+@import "colors";
+/*  Page single project  */
+.singleProject{
+  padding: 10.9375em 10% 8.1em;
+  display: flex;
+  flex-direction: column;
+}
+.singleProject__title{
+  font-size: 2.5em;
+  font-family: Bitter-SemiBold, serif;
+  margin-bottom: 1.5em;
+}
+.singleProject__links, .singleProject__fig{
+  align-self: center;
+}
+.singleProject__links{
+  margin: 4.6875em 0;
+}
+.site__link{
+  margin-right: 4.6875em;
+}
+.site__link, .github__link{
+  text-decoration: none;
+  color: white;
+  padding: 0.3125em 0.9375em;
+  background-color: $green;
+  border-radius: 0.625em;
+}
+.site__link:hover, .site__link:focus, .github__link:hover, .github__link:focus{
+  color: $green;
+  background-color: white;
+  transition: all 200ms linear;
+}
