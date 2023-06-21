@@ -4,6 +4,7 @@
 !package.json
 !webpack.mix.js
 !database.sql
+!screenshot
 
 !/wp-content
 /wp-content/*
