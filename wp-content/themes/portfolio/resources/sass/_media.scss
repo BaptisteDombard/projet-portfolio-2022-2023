@@ -1,0 +1,106 @@
+@import "colors";
+/*  Media queries  */
+@media (min-width: 1024px){
+  /*   About page   */
+  .about__texts{
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .about__img{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  /* Contact page */
+  .contact__info{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .projects, .contact__section{
+    padding-top: 4.6875em;
+  }
+  .about, .legal{
+    margin-top: 4.6875em;
+  }
+  /*  Home page  */
+  .onboarding{
+    padding-top: 20vh;
+  }
+  .main__about{
+    grid-template-columns: repeat(auto-fit, minmax(0, 25em));
+    grid-row-gap: 2.5em;
+  }
+  .main__about-title{
+    line-height: 1.25em;
+  }
+  .main__about-img{
+    justify-self: start;
+  }
+
+  /*  Project card  */
+  .project{
+    width: 100%;
+  }
+  .project__img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  /*  single Project  */
+  .singleProject__thumb{
+    max-width: 100%;
+    height: auto;
+  }
+  .singleProject__links{
+    align-self: start;
+    flex-direction: column;
+    row-gap: 2em;
+  }
+
+  /*  About page  */
+  .about__img{
+    width: 100%;
+  }
+
+  /*  Footer  */
+  .footer__contacts{
+    justify-self: start;
+  }
+
+  /*  mobile Menu  */
+  .header__nav{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .logo{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-self: center;
+    margin-bottom: 2em;
+  }
+  .nav__link{
+    font-size: 1em;
+    justify-self: center;
+    color: $green;
+  }
+  .nav__link:first-of-type{
+    left: 50%;
+  }
+  .nav__link:last-of-type{
+    color: $green;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    margin-right: 0;
+  }
+  .header{
+    position: relative;
+    left: 0;
+    padding: 3% 5%;
+    width: 90%;
+    box-shadow: none;
+  }
+}

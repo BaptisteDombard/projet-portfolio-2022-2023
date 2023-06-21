@@ -3,7 +3,7 @@
 //démarer le système de session pour pouvoir afficher les messages d'erreur du formulaire
 if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 //charger les fichiers des fonctionalités extraites dans des classes.
-require_once(__DIR__. '/controllers/ContactForm.php');
+require_once(__DIR__ . '/controllers/ContactForm.php');
 
 // Disable Wordpress' default Gutenberg Editor:
 add_filter('use_block_editor_for_post', '__return_false', 10);
@@ -12,6 +12,12 @@ add_filter('use_block_editor_for_post', '__return_false', 10);
 add_theme_support('post-thumbnails');
 add_image_size('project_thumbnail', 570, 300, true);
 add_image_size('logo_size', 30, 30, true);
+
+function post_remove ()      //creating functions post_remove for removing menu item
+{
+    remove_menu_page('edit.php');
+}
+add_action('admin_menu', 'post_remove');
 function portfolio_register_custom_post_types()
 {
     register_post_type('project', [

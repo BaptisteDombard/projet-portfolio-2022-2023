@@ -20,11 +20,11 @@
             <ul class="footer__socials">
                 <li class="footer__socialsitem">
                     <img src="<?= wp_get_attachment_image_url('55') ?>" alt="" class="footer__social" width="30" height="30">
-                    <a href="https://github.com/BaptisteDombard" class="footer__sociallink">Mon compte github</a>
+                    <a href="https://github.com/BaptisteDombard" class="footer__sociallink" target="_blank">Mon compte github</a>
                 </li>
                 <li class="footer__socialsitem">
                     <img src="<?= wp_get_attachment_image_url('56') ?>" alt="" class="footer__social" width="30" height="30">
-                    <a href="#" class="footer__sociallink">Mon compte instagram</a>
+                    <a href="#" class="footer__sociallink" target="_blank">Mon compte instagram</a>
                 </li>
             </ul>
         </li>

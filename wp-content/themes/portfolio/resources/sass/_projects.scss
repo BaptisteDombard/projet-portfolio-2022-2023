@@ -1,8 +1,9 @@
 .projects{
   padding: 10.9375em 10% 8em;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(0, 35.625em));
   grid-gap: 2.5em;
+
 }
 .projects__title{
   font-size: 2.5em;

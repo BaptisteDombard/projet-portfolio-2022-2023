@@ -16,13 +16,12 @@ body{
 }
 
 /*   Section onboarding   */
-
 .onboarding{
-  padding: 18.125em 0 0 10%;
+  padding: 30vh 10% 0;
   background-image: url("../../../../uploads/2023/06/background_portfolio.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: calc(100vh - 18.125em);
+  min-height: 70vh;
 }
 .onboarding__title, .onboarding__excerpt{
   font-size: 2.5em;
@@ -55,7 +54,7 @@ body{
   padding: 4.6875em 10%;
   background-color: $green;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(0, 35.625em));
   grid-gap: 2.5em;
 }
 .lastprojects__title{
@@ -84,7 +83,7 @@ body{
 /*  Section Services  */
 
 .services{
-  padding: 4.6875em 0;
+  padding: 4.6875em 10%;
   text-align: center;
 }
 .services__title{
@@ -117,7 +116,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 }
 .main__about-title{
   font-size: 2.5em;
@@ -146,3 +145,5 @@ body{
   background-color: white;
   transition: all 200ms linear;
 }
+
+@import "media";

@@ -15,7 +15,7 @@
                 // Faire une requête en DB pour récupérer 4 animaux
                 $projects = new WP_Query([
                     'post_type' => 'project',
-                    'posts_per_page' => 3
+                    'posts_per_page' => 2
                 ]);
                 // Lancer la boucle pour afficher chaque animal
                 if ($projects->have_posts()): while ($projects->have_posts()): $projects->the_post(); ?>

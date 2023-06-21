@@ -19,12 +19,11 @@
 }
 .nav__link:first-of-type{
   position: absolute;
-  left: 0;
+  left: 5%;
   display: inline-block;
   width: 27px;
   height: 40px;
   opacity: 0;
-  margin-left: 5%;
 }
 .nav__link{
   font-family: Bitter-Regular, serif;

@@ -3,25 +3,16 @@
 .about{
   margin: 10.9375em 10% 4.6875em;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(0, 37.5em));
 }
 .about__title{
   font-size: 2.5em;
   font-family: Bitter-SemiBold, serif;
   margin-bottom: 1.75em;
 }
-.about__texts{
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
 .about__excerpt{
   line-height: 1.875em;
 }
 .about__excerpt+.about__excerpt{
   margin-top: 1.875em;
-}
-
-.about__img{
-  grid-column: 2/3;
-  grid-row: 2/3;
 }

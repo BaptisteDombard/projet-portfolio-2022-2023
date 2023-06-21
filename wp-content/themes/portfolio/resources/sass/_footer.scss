@@ -1,9 +1,10 @@
 @import "colors";
 .footer{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(0, 25.5625em));
   padding:2.5em 10%;
   background-color: $grey;
+  row-gap: 1.25em;
 }
 
 .footer__number{
@@ -11,7 +12,8 @@
 }
 
 .footer__links{
-  .footer__item{
+  align-self: end;
+  .footer__item:not(.footer__item:last-of-type){
     margin-bottom: 1.25em;
   }
 }
@@ -28,7 +30,7 @@
 }
 
 .footer__contacts{
-  justify-self: right;
+  justify-self: end;
 
   .footer__item:last-of-type{
     margin-top: 1.5625em;
