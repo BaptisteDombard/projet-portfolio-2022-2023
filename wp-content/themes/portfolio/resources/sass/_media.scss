@@ -2,11 +2,7 @@
 /*  Media queries  */
 @media (min-width: 1024px){
   /*   About page   */
-  .about__texts{
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  .about__img{
+  .about__imgs{
     grid-column: 2/3;
     grid-row: 2/3;
   }
@@ -28,6 +24,9 @@
   /*  Home page  */
   .onboarding{
     padding-top: 20vh;
+  }
+  .onboarding__link, .lastprojects__link, .services__link, .main__about-link{
+    display: inline-block;
   }
   .main__about{
     grid-template-columns: repeat(auto-fit, minmax(0, 25em));
@@ -61,9 +60,20 @@
   }
 
   /*  About page  */
+  .about{
+    display: flex;
+    flex-direction: column;
+  }
+  .about__excerpt{
+    margin-right: 0;
+  }
+  .about__imgs{
+    row-gap: 3em;
+  }
   .about__img{
     width: 100%;
   }
+
 
   /*  Footer  */
   .footer__contacts{
@@ -72,29 +82,19 @@
 
   /*  mobile Menu  */
   .header__nav{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+      display: flex;
+    flex-direction: column;
   }
   .logo{
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    justify-self: center;
     margin-bottom: 2em;
   }
-  .nav__link{
+  .header__nav-link{
     font-size: 1em;
     justify-self: center;
     color: $green;
   }
-  .nav__link:first-of-type{
+  .header__nav-link:first-of-type{
     left: 50%;
-  }
-  .nav__link:last-of-type{
-    color: $green;
-    padding: 0;
-    background-color: transparent;
-    border-radius: 0;
-    margin-right: 0;
   }
   .header{
     position: relative;
@@ -102,5 +102,32 @@
     padding: 3% 5%;
     width: 90%;
     box-shadow: none;
+  }
+}
+@media (max-width: 450px){
+  .header__nav-link:first-of-type{
+    margin-bottom: 1em;
+  }
+  .footer__nav{
+    flex-direction: column;
+  }
+  .footer__links, .footer__legallink{
+    align-self: flex-start;
+  }
+  .footer__link, .footer__number, .footer__email{
+    font-size: 0.8em;
+  }
+  .main__about-img{
+    width: 100%;
+  }
+  .field__input{
+    width: 100%;
+  }
+  .contact__info-phone, .contact__info-mail{
+    font-size: 0.8em;
+  }
+  .contact__info-phone{
+    display: inline-block;
+    min-height: 1.5em;
   }
 }

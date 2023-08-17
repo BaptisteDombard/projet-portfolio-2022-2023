@@ -1,11 +1,14 @@
 @import "colors";
 .project{
   position: relative;
-  -webkit-box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.25);
-  -moz-box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.25);
-  box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.25);
-  max-width: 570px;
+  border: 1px solid #e3e3e3;
+  min-width: 40%;
   background-color: white;
+  transition: all 200ms linear;
+}
+.project__img{
+  width: 100%;
+  border: 1px solid #e3e3e3;
 }
 .project__link{
   display: inline-block;
@@ -18,26 +21,21 @@
   border-radius: 10px;
 }
 .project__details{
-  margin: 0.9375em 0 1.25em 1.25em;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-row-gap: 0.625em;
+  margin: 0.9em 1.25em 0.5em 1.25em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .project__name{
   font-size: 1.5em;
   font-family: Bitter-SemiBold, serif;
 }
-.project__creation{
-  justify-self: end;
-  margin-right: 1.25em;
+.project__taxonomies{
+  margin: 0.5em 1.25em 0.9em 1.25em;
 }
 .project__taxonomy-item{
-  display: inline-block;
-  padding: 0.25em 0.325em;
-  background-color: $turquoise;
-  border-radius: 10px;
+  font-family: Raleway-SemiBold, sans-serif;
 }
 .project:hover, .project:focus{
   transform: scale(1.1);
-  transition: all 200ms linear;
 }

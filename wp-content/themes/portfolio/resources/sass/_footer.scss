@@ -1,40 +1,35 @@
 @import "colors";
-.footer{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 25.5625em));
+.footer__nav{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding:2.5em 10%;
   background-color: $grey;
   row-gap: 1.25em;
 }
 
-.footer__number{
-  display: inline-block;
-}
-
-.footer__links{
+.footer__links, .footer__legallink{
   align-self: end;
-  .footer__item:not(.footer__item:last-of-type){
-    margin-bottom: 1.25em;
-  }
 }
-.footer__link, .footer__email{
+.footer__item:not(.footer__item:last-of-type){
+  margin-bottom: 1.25em;
+}
+.footer__link, .footer__email, .footer__number{
   text-decoration: none;
   color: black;
-}
-.footer__link:hover, .footer__link:focus, .footer__email:hover, .footer__email:focus{
-  color: $green;
   transition: all 200ms linear;
 }
-.footer__legallink{
-  align-self: end;
+.footer__link:hover, .footer__link:focus, .footer__email:hover, .footer__email:focus, .footer__number:hover, .footer__number:focus{
+  color: $green;
 }
 
 .footer__contacts{
   justify-self: end;
+}
 
-  .footer__item:last-of-type{
-    margin-top: 1.5625em;
-  }
+.footer__contact-item:last-of-type{
+  margin-top: 1.5625em;
+  flex-direction: column;
 }
 .footer__item-logo{
   margin-right: 0.625em;
@@ -47,8 +42,10 @@
   margin-bottom: 1.25em;
 }
 .footer__socials{
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  margin-bottom: 1em;
 }
 .footer__socialsitem{
   position: relative;
@@ -59,8 +56,18 @@
 .footer__socialsitem:last-of-type{
   border-radius: 0.5em;
 }
-.footer__socialsitem:hover, .footer__socialsitem:focus{
-  background-color: $green;
+.circle{
+  fill: white;
+}
+.footer__socialsitem:first-of-type:hover .circle, .footer__socialsitem:first-of-type:focus .circle{
+  fill: $green;
+  transition: all 200ms linear;
+}
+.cls-2{
+  fill: white;
+}
+.footer__socialsitem:last-of-type:hover .cls-2, .footer__socialsitem:last-of-type:focus .cls-2{
+  fill: $green;
   transition: all 200ms linear;
 }
 .footer__sociallink{
@@ -70,4 +77,7 @@
   height: 30px;
   position: absolute;
   left: 0;
+}
+.footer__copyright{
+  font-size: 0.5em;
 }

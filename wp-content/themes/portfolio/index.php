@@ -1,3 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Baptiste Dombard">
+    <meta name="description" content="Portfolio de Baptiste Dombard">
+    <meta name="keyword" content="Portfolio, Baptiste Dombard">
+    <title>Baptiste Dombard - Mon portfolio</title>
+    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() . '/public/css/site.css'; ?>" />
+</head>
+<body class="body">
+<h1 class="hidden">Portfolio de Baptiste Dombard</h1>
 <?= get_header()?>
     <main class="main">
         <section class="onboarding" aria-labelledby="onboarding__title">
@@ -7,11 +22,14 @@
             <a href="<?=get_permalink(get_page_by_path( 'a-propos' ))?>" class="onboarding__link">En savoir plus sur moi</a>
         </section>
         <section class="lastprojects" aria-labelledby="lastprojects__title">
-            <h2 class="lastprojects__title" id="lastprojects__title">Mes derniers projets</h2>
-            <div class="lastprojects__linkcontainer">
-                <a href="<?=get_permalink(get_page_by_path( 'projets' ))?>" class="lastprojects__link">Découvrir mes créations</a>
+            <div class="lastprojects__head">
+                <h2 class="lastprojects__title" id="lastprojects__title">Mes derniers projets</h2>
+                <div class="lastprojects__linkcontainer">
+                    <a href="<?=get_permalink(get_page_by_path( 'projets' ))?>" class="lastprojects__link">Découvrir mes créations</a>
+                </div>
             </div>
-            <?php
+            <div class="lastprojects__container">
+                <?php
                 // Faire une requête en DB pour récupérer 4 animaux
                 $projects = new WP_Query([
                     'post_type' => 'project',
@@ -32,16 +50,17 @@
                                 <p class="project__creation"><?=get_field('starting_year') . '/' . get_field('ending_year')?></p>
                                 <ul class="project__taxonomies">
                                     <?php
-                                        $terms =  get_the_terms(get_the_ID(),'types');
-                                        foreach ($terms as $term)?>
+                                    $terms =  get_the_terms(get_the_ID(),'types');
+                                    foreach ($terms as $term)?>
                                     <li class="project__taxonomy-item"><?= $term->name ?></li>
                                 </ul>
                             </div>
                         </div>
                     </article>
                 <?php endwhile; else:?>
-                <p>Désolé, je n'ai aucun projet à vous présenter.</p>
+                    <p>Désolé, je n'ai aucun projet à vous présenter.</p>
                 <?php endif;?>
+            </div>
         </section>
         <section class="services" aria-labelledby="services__title">
             <h2 class="services__title" id="services__title">Mes services</h2>
@@ -56,7 +75,7 @@
                 <p class="main__about-excerpt">Je suis un web déveloper curieux, toujours de bonne humeur et ravi d’écouter vos demandes et suggestions. Alors, n’hésitez pas à faire appel à moi pour toutes vos requêtes en termes de création web.</p>
                 <a href="<?=get_permalink(get_page_by_path( 'a-propos' ))?>" class="main__about-link">En savoir plus sur moi</a>
             </div>
-            <img src="<?= wp_get_attachment_image_url('87', 'medium') ?>" alt="" class="main__about-img">
+            <img src="<?= wp_get_attachment_image_url('87', 'medium_large') ?>" alt="" class="main__about-img">
         </section>
     </main>
 <?= get_footer()?>

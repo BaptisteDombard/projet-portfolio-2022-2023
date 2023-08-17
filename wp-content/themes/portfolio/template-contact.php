@@ -1,4 +1,19 @@
 <?php /* Template Name: Contact page template */ ?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Baptiste Dombard">
+    <meta name="description" content="Portfolio de Baptiste Dombard">
+    <meta name="keyword" content="Portfolio, Baptiste Dombard">
+    <title>Baptiste Dombard - Contact</title>
+    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() . '/public/css/site.css'; ?>" />
+</head>
+<body class="body">
+<h1 class="hidden">Portfolio de Baptiste Dombard</h1>
 <?= get_header()?>
 <section class="contact__section" aria-labelledby="contact__title">
     <h2 class="contact__title" id="contact__title">Me contacter</h2>
@@ -73,10 +88,9 @@
         <h3 class="contact__info-title" id="contact__info-title">Coordonnées</h3>
         <ul class="contact__info-list">
             <li class="contact__info-item">
-                <img src="<?= wp_get_attachment_image_url('54', 'logo_size') ?>" alt="" class="contact__info-logo">
-                <p class="contact__info-phone">+32 (0) 472 06 20 88</p>
-            </li><li class="contact__info-item">
-                <img src="<?= wp_get_attachment_image_url('52', 'logo_size') ?>" alt="" class="contact__info-logo">
+                <a href="tel:+32472062088" class="contact__info-phone">+32 (0) 472 06 20 88</a>
+            </li>
+            <li class="contact__info-item">
                 <a href="mailto:baptistedombard@gmail.com" class="contact__info-mail">baptistedombard@gmail.com</a>
             </li>
         </ul>

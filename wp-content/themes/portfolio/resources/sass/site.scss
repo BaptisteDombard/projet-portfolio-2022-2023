@@ -17,14 +17,14 @@ body{
 
 /*   Section onboarding   */
 .onboarding{
-  padding: 30vh 10% 0;
+  padding: 30vh 10% 10vh;
   background-image: url("../../../../uploads/2023/06/background_portfolio.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 70vh;
+  min-height: 60vh;
 }
 .onboarding__title, .onboarding__excerpt{
-  font-size: 2.5em;
+  font-size: 2em;
   font-family: Bitter-Regular, serif;
   line-height: 1.5em;
 }
@@ -33,19 +33,19 @@ body{
   font-family: Bitter-SemiBold, serif;
 }
 .onboarding__excerpt{
-  margin-bottom: 1.75em;
+  margin-bottom: 3em;
 }
 .onboarding__link{
   color: white;
   text-decoration: none;
-  padding: 0.3125em 0.9375em;
+  padding: 0.75em 1.25em;
   background-color: $green;
   border-radius: 0.625em;
+  transition: all 200ms linear;
 }
 .onboarding__link:hover, .onboarding__link:focus{
   color: $green;
   background-color: white;
-  transition: all 200ms linear;
 }
 
 /*  Section lastproject  */
@@ -53,18 +53,27 @@ body{
 .lastprojects{
   padding: 4.6875em 10%;
   background-color: $green;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 35.625em));
-  grid-gap: 2.5em;
+}
+.lastprojects__head{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 3em;
+}
+.lastprojects__container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1em;
 }
 .lastprojects__title{
   display: inline-block;
   color: white;
   font-size: 2.5em;
   font-family: Bitter-SemiBold, serif;
+  margin-bottom: 0.5em;
 }
 .lastprojects__linkcontainer{
-  justify-self: end;
   padding-top: 0.3125em;
 }
 .lastprojects__link{
@@ -73,11 +82,11 @@ body{
   padding: 0.3125em 0.9375em;
   background-color: white;
   border-radius: 0.625em;
+  transition: all 200ms linear;
 }
 .lastprojects__link:hover, .lastprojects__link:focus{
   background-color: $green;
   color: white;
-  transition: all 200ms linear;
 }
 
 /*  Section Services  */
@@ -98,14 +107,14 @@ body{
 .services__link{
   color: white;
   text-decoration: none;
-  padding: 0.3125em 0.9375em;
+  padding: 0.75em 1.25em;
   background-color: $green;
   border-radius: 0.625em;
+  transition: all 200ms linear;
 }
 .services__link:hover, .services__link:focus{
   color: $green;
   background-color: white;
-  transition: all 200ms linear;
 }
 
 /*  Section Main About  */
@@ -121,29 +130,30 @@ body{
 .main__about-title{
   font-size: 2.5em;
   font-family: Bitter-SemiBold, serif;
-  margin-bottom: 1.75em;
+  margin-bottom: 1.5em;
 }
 .main__about-img{
   justify-self: center;
+  border-radius: 0.3em;
 }
 .main__about-texts{
   max-width: 80%;
   line-height: 1.5em;
 }
 .main__about-excerpt{
-  margin-bottom: 4.375em;
+  margin-bottom: 4.5em;
 }
 .main__about-link{
   color: white;
   text-decoration: none;
-  padding: 0.3125em 0.9375em;
+  padding: 0.75em 1.25em;
   background-color: $green;
   border-radius: 0.625em;
+  transition: all 200ms linear;
 }
 .main__about-link:hover, .main__about-link:focus{
   color: $green;
   background-color: white;
-  transition: all 200ms linear;
 }
 
 @import "media";

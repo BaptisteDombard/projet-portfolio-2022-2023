@@ -1,12 +1,9 @@
 @import "colors";
 /*  Page single project  */
 .singleProject{
-  padding: 10.9375em 10% 8.1em;
+  padding: 10em 10% 8.1em;
   display: flex;
   flex-direction: column;
-  background-image: url("../../../../uploads/2023/06/background_portfolio.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .singleProject__title{
   font-size: 2.5em;
@@ -18,6 +15,16 @@
 }
 .singleProject__content{
   margin-bottom: 4.6875em;
+  display: flex;
+  flex-wrap: wrap;
+}
+.singleProject__context, .singleProject__purpose, .singleProject__steps{
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+}
+.singleProject__purpose, .singleProject__steps{
+  margin-left: 2em;
 }
 .content__title{
   font-size: 1.5em;
@@ -31,13 +38,17 @@
   margin-bottom: 4.6875em;
   display: flex;
 }
+.singleProject__thumb{
+  border: 1px solid #e3e3e3;
+  border-radius: 1em;
+}
 .site__link{
   margin-right: 4.6875em;
 }
 .site__link, .github__link{
   text-decoration: none;
   color: white;
-  padding: 0.3125em 0.9375em;
+  padding: 0.75em 1.25em;
   background-color: $green;
   border-radius: 0.625em;
 }

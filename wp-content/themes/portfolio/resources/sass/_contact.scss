@@ -85,18 +85,18 @@
 /* section contact info */
 
 .contact__info-phone{
-  display: inline-block;
+  background-image: url("../../../../uploads/2023/06/icon-phone-white-30x30.png");
 }
 .contact__info-mail{
+  background-image: url("../../../../uploads/2023/06/icon-mail-white-30x30.png");
+}
+
+.contact__info-mail, .contact__info-phone{
   text-decoration: none;
   color: white;
-}
-.contact__info-logo{
-  margin-right: 0.625em;
-}
-.contact__info-item{
-  display: flex;
-  align-items: center;
+  padding-left: 2em;
+  background-repeat: no-repeat;
+  background-position: left;
 }
 .contact__info-item:first-of-type{
   margin-bottom: 2.5em;
