@@ -28,6 +28,8 @@
 .field__input{
   border: none;
   border-radius: 5px;
+  padding: 0.2em 1.2em;
+  font-family: Raleway-Regular, sans-serif;
 }
 .field__input:not(.field:last-of-type>.field__input){
   min-height: 2.5em;
@@ -47,21 +49,23 @@
   grid-column: 1/-1;
 }
 .contact__submit{
-  padding: 0.3125em 0.9375em;
+  padding: 0.5em 1em;
   background-color: white;
   border: none;
   border-radius: 5px;
+  font-size: 0.75em;
+  font-family: Raleway-Regular, sans-serif;
+  transition: all 250ms linear;
 }
 .contact__submit:hover{
   cursor: pointer;
 }
 .contact__submit:hover, .contact__submit:focus{
   background-color: darken(white, 20);
-  transition: all 250ms linear;
 }
 /*  Result Message  */
 .success{
-  color: #00cdcd;
+  color: #FFCA3A;
   font-family: Raleway-SemiBold, serif;
 }
 .success__link{
@@ -79,7 +83,7 @@
   transition: all 250ms linear;
 }
 .error, .field__error{
-  color: red;
+  color: #FF595E;
   font-family: Raleway-SemiBold, serif;
 }
 /* section contact info */
@@ -97,7 +101,11 @@
   padding-left: 2em;
   background-repeat: no-repeat;
   background-position: left;
+  transition: all 200ms linear;
 }
 .contact__info-item:first-of-type{
   margin-bottom: 2.5em;
+}
+.contact__info-mail:hover, .contact__info-mail:focus, .contact__info-phone:hover, .contact__info-phone:focus{
+  color: black;
 }

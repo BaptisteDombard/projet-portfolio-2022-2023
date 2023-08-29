@@ -9,6 +9,12 @@
     <meta name="author" content="Baptiste Dombard">
     <meta name="description" content="Portfolio de Baptiste Dombard">
     <meta name="keyword" content="Portfolio, Baptiste Dombard">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content="Baptiste Dombard - Mes projets">
+    <meta property="og:description" content="Découvrer les réalisations de Baptiste Dombard">
+    <meta property="og:image" content="">
+    <meta property="og:locale" content="fr_BE">
     <title>Baptiste Dombard - Mes projets</title>
     <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() . '/public/css/site.css'; ?>" />
 </head>
@@ -20,7 +26,7 @@
         <h2 class="projects__title" id="projects__title">Mes projets</h2>
         <div class="projects_contrainer">
             <?php
-            // Faire une requête en DB pour récupérer 4 animaux
+            // Faire une requête en DB pour récupérer mes projets
             $projects = new WP_Query([
                 'post_type' => 'project',
             ]);

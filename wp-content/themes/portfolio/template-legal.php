@@ -9,6 +9,12 @@
     <meta name="author" content="Baptiste Dombard">
     <meta name="description" content="Portfolio de Baptiste Dombard">
     <meta name="keyword" content="Portfolio, Baptiste Dombard">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content="Baptiste Dombard - Mention L&eacute;gale">
+    <meta property="og:description" content="Les mentions légales du portfolio de Bapyiste Dombard">
+    <meta property="og:image" content="">
+    <meta property="og:locale" content="fr_BE">
     <title>Baptiste Dombard - Mention L&eacute;gale</title>
     <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() . '/public/css/site.css'; ?>" />
 </head>
@@ -20,11 +26,7 @@
         <?= get_the_title()?>
     </h2>
     <p class="legal__excerpt">
-        Baptiste Dombard traitera avec le plus grand soin les données personnelles qui lui ont été communiquées.
-        Baptiste Dombard les traitera en toute confidentialité et ne les utilisera qu’aux fins pour lesquelles elles lui
-        ont été communiquées. Ces données peuvent être enregistrées dans une ou plusieurs bases de
-        données de Baptiste Dombard et ne seront pas communiquées à des tiers sans le consentement de la
-        personne concernée. Cette dernière peut en outre toujours accéder à ses données et les rectifier.
+
     </p>
 </main>
 <?= get_footer()?>

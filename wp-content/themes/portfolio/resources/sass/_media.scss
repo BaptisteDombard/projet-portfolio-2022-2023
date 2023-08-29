@@ -6,6 +6,9 @@
     grid-column: 2/3;
     grid-row: 2/3;
   }
+  .singleProject__context, .singleProject__purpose, .singleProject__steps{
+    width: 30%;
+  }
   /* Contact page */
   .contact__info{
     grid-column: 2/3;
@@ -104,7 +107,7 @@
     box-shadow: none;
   }
 }
-@media (max-width: 450px){
+@media (max-width: 500px){
   .header__nav-link:first-of-type{
     margin-bottom: 1em;
   }
@@ -119,6 +122,12 @@
   }
   .main__about-img{
     width: 100%;
+  }
+  .singleProject__content{
+    flex-direction: column;
+  }
+  .contact__fields{
+    grid-template-columns: 1fr;
   }
   .field__input{
     width: 100%;

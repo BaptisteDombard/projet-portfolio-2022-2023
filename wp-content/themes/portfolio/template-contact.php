@@ -9,6 +9,12 @@
     <meta name="author" content="Baptiste Dombard">
     <meta name="description" content="Portfolio de Baptiste Dombard">
     <meta name="keyword" content="Portfolio, Baptiste Dombard">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content="Baptiste Dombard - Contact">
+    <meta property="og:description" content="Contactez Baptiste Dompbard pour toute questions">
+    <meta property="og:image" content="">
+    <meta property="og:locale" content="fr_BE">
     <title>Baptiste Dombard - Contact</title>
     <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() . '/public/css/site.css'; ?>" />
 </head>

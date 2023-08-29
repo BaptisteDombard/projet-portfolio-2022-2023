@@ -8,6 +8,12 @@
     <meta name="author" content="Baptiste Dombard">
     <meta name="description" content="Portfolio de Baptiste Dombard">
     <meta name="keyword" content="Portfolio, Baptiste Dombard">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content="Baptiste Dombard - Mon portfolio">
+    <meta property="og:description" content="Découvrer Baptiste Dombard à travers son portfolio">
+    <meta property="og:image" content="">
+    <meta property="og:locale" content="fr_BE">
     <title>Baptiste Dombard - Mon portfolio</title>
     <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() . '/public/css/site.css'; ?>" />
 </head>
@@ -15,10 +21,10 @@
 <h1 class="hidden">Portfolio de Baptiste Dombard</h1>
 <?= get_header()?>
     <main class="main">
-        <section class="onboarding" aria-labelledby="onboarding__title">
+        <section class="onboarding" aria-labelledby="onboarding__title" itemscope itemtype="https://schema.org/Person">
             <h2 class="onboarding__title" id="onboarding__title">Bienvenue sur mon portfolio.</h2>
-            <p class="onboarding__excerpt">Je m’appelle Baptiste Dombard,
-                <br><span class="onboarding__excerpt-green">Web developper</span></p>
+            <p class="onboarding__excerpt">Je m’appelle <span itemprop="givenName">Baptiste</span> <span itemprop="familyName">Dombard</span>,
+                <br><span class="onboarding__excerpt-green" itemprop="jobTitle">Web developper</span></p>
             <a href="<?=get_permalink(get_page_by_path( 'a-propos' ))?>" class="onboarding__link">En savoir plus sur moi</a>
         </section>
         <section class="lastprojects" aria-labelledby="lastprojects__title">
@@ -42,19 +48,19 @@
                             <span class="sro">Découvrir <?= get_the_title()?>  </span>
                         </a>
                         <div class="project__card">
-                            <figure class="project__fig">
-                                <?= get_the_post_thumbnail(null, 'project_thumbnail', ['class' => 'project__img']); ?>
-                            </figure>
                             <div class="project__details">
                                 <h3 class="project__name"><?= get_the_title(); ?></h3>
                                 <p class="project__creation"><?=get_field('starting_year') . '/' . get_field('ending_year')?></p>
-                                <ul class="project__taxonomies">
-                                    <?php
-                                    $terms =  get_the_terms(get_the_ID(),'types');
-                                    foreach ($terms as $term)?>
-                                    <li class="project__taxonomy-item"><?= $term->name ?></li>
-                                </ul>
                             </div>
+                            <figure class="project__fig">
+                                <?= get_the_post_thumbnail(null, 'project_thumbnail', ['class' => 'project__img']); ?>
+                            </figure>
+                            <ul class="project__taxonomies">
+                                <?php
+                                $terms =  get_the_terms(get_the_ID(),'types');
+                                foreach ($terms as $term)?>
+                                <li class="project__taxonomy-item"><?= $term->name ?></li>
+                            </ul>
                         </div>
                     </article>
                 <?php endwhile; else:?>

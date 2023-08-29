@@ -8,7 +8,13 @@
     <meta name="author" content="Baptiste Dombard">
     <meta name="description" content="Portfolio de Baptiste Dombard">
     <meta name="keyword" content="Portfolio, Baptiste Dombard">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/">
+    <meta property="og:image" content="">
+    <meta property="og:locale" content="fr_BE">
     <?php if(have_posts()): while(have_posts()): the_post(); ?>
+    <meta property="og:description" content="Découvrer le projet <?= get_the_title(); ?>">
+    <meta property="og:title" content="Baptiste Dombard - <?= get_the_title(); ?>">
     <title>Baptiste Dombard - <?= get_the_title(); ?></title>
     <?php endwhile; endif; ?>
     <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() . '/public/css/site.css'; ?>" />
